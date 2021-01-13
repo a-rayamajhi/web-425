@@ -8,6 +8,7 @@
 
 import { Component, OnInit } from '@angular/core';
 
+// Component definition
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',

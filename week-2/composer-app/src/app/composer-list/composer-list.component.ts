@@ -7,26 +7,42 @@
  */
 
 import { Component, OnInit } from '@angular/core';
+import { IComposer } from './composer.interface';
 
-export default class Composer {
+/**
+ * Composer class implements IComposer interface
+ */
+export default class Composer implements IComposer {
   fullName: string;
   genre: string;
 
+  /**
+   *
+   * @param fullName String
+   * @param genre String
+   */
   constructor(fullName: string, genre: string) {
     this.fullName = fullName;
     this.genre = genre;
   }
 }
 
+/**
+ * Component Definition
+ */
 @Component({
   selector: 'app-composer-list',
   templateUrl: './composer-list.component.html',
   styleUrls: ['./composer-list.component.css'],
 })
 export class ComposerListComponent implements OnInit {
+  /**
+   * composer with type Array of Composer type
+   */
   composers: Array<Composer>;
 
   constructor() {
+    // Instances of Composer Object
     this.composers = [
       new Composer('Kurt Cobain', 'Alternative/Rock'),
       new Composer('Paul McCartney', 'Classic rock'),
