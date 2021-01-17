@@ -1,0 +1,31 @@
+<!--
+; ============================================
+; Title: Exercise 3.3
+; Author: Professor Krasso
+; Date:  16 Jan 2021
+; Modified By:  Anil Rayamajhi
+; Description: Home component
+;===========================================
+-->
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <ul class="navbar-nav">
+    <li class="nav-item active"><a href="#" class="nav-link">Home</a></li>
+    <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+    <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+  <br /><br />
+  <h2>{{ assignment }}</h2>
+  <br /><br />
+
+  <!-- if the isLoggedIn variable is true -->
+  <div class="row">
+    <div class="col-sm-4"><app-my-image></app-my-image></div>
+    <div class="col-sm-8">
+      <app-my-details></app-my-details>
+    </div>
+  </div>
+</div>
