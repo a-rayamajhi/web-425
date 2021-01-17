@@ -16,6 +16,12 @@ import { IComposer } from '../composer.interface';
   templateUrl: './composer-details.component.html',
   styleUrls: ['./composer-details.component.css'],
 })
+
+/**
+ * Note: `!` is used to fix build warnings related to strict nul|undefined checks
+ *
+ * https://stackoverflow.com/questions/65053723/angular-typescript-type-string-undefined-is-not-assignable-to-type-st
+ */
 export class ComposerDetailsComponent implements OnInit {
   composerId: number;
   composer!: IComposer;
