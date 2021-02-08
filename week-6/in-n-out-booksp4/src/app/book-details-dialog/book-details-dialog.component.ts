@@ -19,6 +19,13 @@ import { IBook } from '../book.interface';
 export class BookDetailsDialogComponent implements OnInit {
   book: IBook;
 
+  /**
+   *
+   * @param dialogRef MatDialogRef
+   * @param data any
+   *
+   * Description: Load BookDetailsDialogComponent to dialog
+   */
   constructor(
     private dialogRef: MatDialogRef<BookDetailsDialogComponent>,
     @Inject(MAT_DIALOG_DATA) data: any

@@ -16,6 +16,7 @@ import { IBook } from './book.interface';
   providedIn: 'root',
 })
 export class BooksService {
+  // books property of type Array<IBook>
   books: Array<IBook>;
 
   constructor() {

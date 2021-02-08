@@ -15,20 +15,25 @@ import { IWishlistItem } from './../wishlist-item.interface';
   styleUrls: ['./wishlist-create.component.scss'],
 })
 export class WishlistCreateComponent implements OnInit {
+  // output statement named addItemEmitter of type EventEmitter<IWishlistItem>
   @Output() addItemEmitter = new EventEmitter<IWishlistItem>();
+  // items property of type IWishlistItem
   item: IWishlistItem;
 
   constructor() {
+    // instance of the IWishlistItem object
     this.item = {} as IWishlistItem;
   }
 
   ngOnInit(): void {}
 
+  // handler to add item to wishlist items array
   addItem() {
     this.addItemEmitter.emit({
       title: this.item.title,
       authors: this.item.authors,
     });
+    // reset item object
     this.item = {} as IWishlistItem;
   }
 }

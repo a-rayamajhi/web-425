@@ -1,4 +1,4 @@
-// import theme variables
+// import theme variables, app base styles goes here
 @import "./theme";
 
 html,
@@ -40,5 +40,11 @@ body {
   text-align: center;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

@@ -38,7 +38,8 @@ export class BookListComponent implements OnInit {
    *
    * @param isbn string
    *
-   * identify clicked book
+   * Description: Identify clicked book,
+   * load book in BookDetailsDialogComponent Modal
    */
   showBookDetails(isbn: string) {
     this.book = this.booksService.getBook(isbn);
@@ -48,7 +49,7 @@ export class BookListComponent implements OnInit {
       width: '800px',
     });
 
-    console.log(this.book);
+    // Subscribe to dialog state
     dialogRef.afterClosed().subscribe((result) => {
       if (result === 'confirm') {
         this.book = null;

@@ -15,6 +15,7 @@ import { IWishlistItem } from '../wishlist-item.interface';
   styleUrls: ['./wishlist.component.scss'],
 })
 export class WishlistComponent implements OnInit {
+  // items property of type Array<IWishlistItem> assigned to empty Array
   items: Array<IWishlistItem> = [];
 
   constructor() {}
@@ -24,6 +25,8 @@ export class WishlistComponent implements OnInit {
   /**
    *
    * @param item IWishlistItem
+   *
+   * Description: push item for wishlist create to items array
    */
   updateItemsHandler(item: IWishlistItem) {
     this.items.push(item);
