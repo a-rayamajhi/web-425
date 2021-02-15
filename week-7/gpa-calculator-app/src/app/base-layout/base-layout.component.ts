@@ -1,7 +1,7 @@
 /**
  * Title: base-layout.component.ts
  * Author: Professor Krasso
- * Date: 14 Feb 2021
+ * Date: 15 Feb 2021
  * Modified By:  Anil Rayamajhi
  * Description: Base Layout Component
  *      Component contains navbar with sign out logic
@@ -27,7 +27,7 @@ export class BaseLayoutComponent implements OnInit {
    *
    */
   constructor(private cookieService: CookieService, private router: Router) {
-    this.assignment = 'Exercise 7.2 - Reactive Forms';
+    this.assignment = 'GPA Calculator';
   }
 
   ngOnInit(): void {}

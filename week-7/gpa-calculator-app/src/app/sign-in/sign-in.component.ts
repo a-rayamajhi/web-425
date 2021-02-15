@@ -1,7 +1,7 @@
 /**
  * Title: sign-in.component.ts
  * Author: Professor Krasso
- * Date: 14 Feb 2021
+ * Date: 15 Feb 2021
  * Modified By:  Anil Rayamajhi
  * Description: Sign In Component with Reactive Form,
  *     Logic to validate and access form and payload
@@ -9,7 +9,7 @@
  */
 
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 import { SignInService } from '../sign-in.service';
@@ -31,10 +31,26 @@ export class SignInComponent implements OnInit {
   ) {}
 
   /**
-   * initiate form with json with empty studentId
+   * Validator to studentId
+   * Only allow numeric values and make the field required
    */
   ngOnInit(): void {
-    this.signinForm = this.fb.group({ studentId: '' });
+    this.signinForm = this.fb.group({
+      studentId: [
+        '',
+        Validators.compose([
+          Validators.required,
+          Validators.pattern('^[0-9]*$'),
+        ]),
+      ],
+    });
+  }
+
+  /**
+   * Helper function to return the forms controls.
+   */
+  get form() {
+    return this.signinForm.controls;
   }
 
   /**

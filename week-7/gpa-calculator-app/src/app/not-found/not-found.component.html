@@ -1,0 +1,27 @@
+<!--
+  Not Found Component,
+  Render if the router does not exist in the routing configuration
+  Custom 404 page
+ -->
+<div fxLayout="column">
+  <mat-card
+    fcFlex
+    style="margin-top: 10%; width: 50%; margin-left: 18%"
+    class="mat-elevation-z0"
+  >
+    <mat-card-title>
+      <img
+        width="100%"
+        src="./assets/not-found-image.png"
+        alt="not fount image"
+      />
+    </mat-card-title>
+
+    <!-- Button to navigate user to home page -->
+    <mat-card-content style="text-align: center; padding-left: 30%">
+      <button mat-raised-button color="accent" routerLink="/">
+        Return home
+      </button>
+    </mat-card-content>
+  </mat-card>
+</div>
