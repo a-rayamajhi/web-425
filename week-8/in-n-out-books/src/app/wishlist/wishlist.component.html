@@ -1,0 +1,22 @@
+<!-- Wishlist Component -->
+<div fxLayout="column">
+  <!-- App wish list directive -->
+  <app-wishlist-create fxFlex (addItemEmitter)="updateItemsHandler($event)">
+  </app-wishlist-create>
+  <br />
+  <br />
+  <div>
+    <!-- list items with title and a  uthors -->
+    <mat-list fxFlex *ngIf="items && items.length > 0">
+      <mat-list-item *ngFor="let item of items">
+        <div mat-line>Title: {{ item.title }}</div>
+        <div mat-line>Authors: {{ item.authors }}</div>
+      </mat-list-item>
+    </mat-list>
+
+    <!-- message, if no item in items array -->
+    <div fxFlex *ngIf="!items || items.length === 0">
+      <h2 style="text-align: center">Your wishlist is empty.</h2>
+    </div>
+  </div>
+</div>
